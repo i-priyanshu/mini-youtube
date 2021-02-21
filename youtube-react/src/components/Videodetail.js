@@ -3,14 +3,12 @@ import React from "react";
 const VideoDetail = ({ video }) => {
   if (!video) {
     return (
-      <div className="ui segment">
-        <div className="ui active inverted dimmer">
-          <div className="ui large text loader">Loading</div>
+      <div class="ui black icon message">
+        <i class="notched circle loading icon"></i>
+        <div class="content">
+          <div class="header">Just one second</div>
+          <p>We're fetching that content for you.</p>
         </div>
-        <p></p>
-        <br></br>
-        <br></br>
-        <br></br>
       </div>
     );
   }
@@ -22,9 +20,9 @@ const VideoDetail = ({ video }) => {
       <div className="ui embed">
         <iframe title="video player" src={VideoSrc} />
       </div>
-      <div className="ui segment">
-        <h4 className="ui header">{video.snippet.title}</h4>
-        <p>{video.snippet.description}</p>
+      <div className="ui raised padded segment inverted">
+        <h4 className="ui large header">{video.snippet.title}</h4>
+        <p className="ui large content">{video.snippet.description}</p>
       </div>
     </div>
   );

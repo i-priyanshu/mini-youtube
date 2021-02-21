@@ -5,18 +5,18 @@ const VideoItem = ({ video, onVideoSelect }) => {
   return (
     <div
       onClick={() => onVideoSelect(video)}
-      className="video-item item ui card"
+      className="video-item zoom ui card centered segment inverted"
       data-content="youtube"
     >
-      <div className="image">
+      <div className="ui fluid centered image">
         <img
           alt={video.snippet.title}
-          className="ui medium image"
+          className="ui medium image float"
           src={video.snippet.thumbnails.medium.url}
         />
       </div>
       <div className="content">
-        <div className="description">{video.snippet.title}</div>
+        <div className="ui middle aligned">{video.snippet.title}</div>
       </div>
     </div>
   );

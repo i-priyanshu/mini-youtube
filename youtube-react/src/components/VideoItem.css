@@ -4,6 +4,20 @@
   cursor: pointer;
 }
 
-.video-item.item img {
+/* .video-item.item img {
   max-width: 180px;
+} */
+
+.zoom {
+  padding: 50px;
+  background-color: rgba(236, 46, 46, 0.473);
+  transition: transform 0.2s; /* Animation */
+}
+
+.zoom:hover {
+  transform: scale(1.1);
+}
+
+body {
+  background-color: #2928288c;
 }
